@@ -1,34 +1,25 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import StyledButton from './components/styles/Button.styled';
+import Wrapper from './components/styles/Wrapper.styled';
+import Title from './components/styles/Title.styled';
+import Button1 from './components/styles/Button1.styled';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="App">
+      <StyledButton href="#">Default Call-to-action</StyledButton>
+      <StyledButton primary="true" href="#">Primary Call-to-action</StyledButton>
+      <Wrapper>
+        <Title>Hello World!</Title>
+      </Wrapper>
+      <Wrapper>
+        <Button1>Normal</Button1>
+        <Button1 primary="true">Primary</Button1>
+      </Wrapper>
+    </div>
   )
 }
 
